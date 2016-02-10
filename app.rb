@@ -74,6 +74,7 @@ class HangpersonApp < Sinatra::Base
       erb :win
     else
       erb :show
+    end
   end
   
   get '/lose' do
@@ -83,6 +84,7 @@ class HangpersonApp < Sinatra::Base
       erb :lose
     else
       erb :show
+    end
   end
   
 end
