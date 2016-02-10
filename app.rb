@@ -69,12 +69,14 @@ class HangpersonApp < Sinatra::Base
   
   get '/win' do
     ### YOUR CODE HERE ###
-    erb :win # You may change/remove this line
+    erb :show unless @game.check_win_or_lose == :win
+    erb :win
   end
   
   get '/lose' do
     ### YOUR CODE HERE ###
-    erb :lose # You may change/remove this line
+    erb :show unless @game.check_win_or_lose == :lose
+    erb:lose
   end
   
 end
